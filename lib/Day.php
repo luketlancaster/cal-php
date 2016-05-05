@@ -1,8 +1,6 @@
 <?php
-
-
 /* Zeller's Congruence Rules:
- * h = day of week (0 = Sunday)
+ * h = day of week (0 = Saturday)
  * q = day of month
  * m = month (4 = April)
  * Y = year
@@ -25,7 +23,14 @@ class Day
 
     public function day_of_week()
     {
-        return ($this->_zellers()) % 7;
+        $number = $this->_zellers() % 7;
+        if ($number != 0) {
+            $number = $number -1;
+        } else {
+            $number = 6;
+        }
+        return $number;
+
     }
 
     private function _zellers()
