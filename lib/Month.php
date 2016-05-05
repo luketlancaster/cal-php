@@ -17,7 +17,7 @@ class Month
     {
         $this->_month = $month;
         $this->_year = new Year(2016);
-        $this->_start_day = (new Day($this->_year->to_string(), $this->_month))->zellers();
+        $this->_start_day = (new Day($this->_year->to_string(), $this->_month))->day_of_week();
         $this->_leap = $this->_year->leap(); // Probably don't need?
     }
 
