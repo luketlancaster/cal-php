@@ -16,6 +16,7 @@ Su Mo Tu We Th Fr Sa
 17 18 19 20 21 22 23
 24 25 26 27 28 29 30
 31
+
 EOD;
         $this->assertEquals($actual, $m->to_string());
     }
@@ -85,7 +86,7 @@ EOD;
 
     public function testMarch1987ItsMyBirthday()
     {
-        $m = new Month(12, 1996);
+        $m = new Month(3, 1987);
         $actual = <<<EOD
      March 1987
 Su Mo Tu We Th Fr Sa

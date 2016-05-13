@@ -13,4 +13,4 @@ if (isset($argv[2])) {
 }
 
 
-echo "$message\n";
+echo "$message";

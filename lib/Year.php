@@ -11,7 +11,12 @@ class Year
 
     public function leap()
     {
-        return true; // For now, since we're only worried about 2016 :/
+        $y = $this->_year;
+
+        if ($y % 4 == 0 && $y % 100 == 0 && $y % 400 == 0) return true;
+        if ($y % 4 == 0 && $y % 100 == 0) return false;
+        if ($y % 4 == 0) return true;
+        return false;
     }
 
     public function to_string()
@@ -19,3 +24,4 @@ class Year
         return $this->_year;
     }
 }
+
